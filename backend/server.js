@@ -40,9 +40,6 @@ app.use("/api/orders", orderRoute);
 app.use(errorHandler);
 
 
-app.get("/", (req, res) => {
-  res.send(`<h1>Hello Guyz</h1>`);
-});
 
 
 app.listen(process.env.PORT || port, () => {
