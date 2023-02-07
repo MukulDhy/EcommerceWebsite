@@ -10,7 +10,7 @@ export const SingleProductAction = (urlLink) => async (dispatch) => {
     // console.log("uel == " + urlLink)
     dispatch({ type: SINGLE_PRODUCT_REQUEST });
     const {data}  = await axios.get(
-      `/api/product/${urlLink}`
+      `https://ecommercewebsitefinal.onrender.com/api/product/${urlLink}`
     );
     // console.log("dwdwdwdawa6878daw" + data.Singleproduct);
     dispatch({ type: SINGLE_PRODUCT_SUCCESS, payload: data.Singleproduct});
