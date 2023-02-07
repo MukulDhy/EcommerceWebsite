@@ -12,7 +12,7 @@ import {
 export const productActionList = () => async (dispatch) => {
   try {
     dispatch({ type: GET_PRODUCTS_REQUEST });
-    const { data } = await axios.get("/api/products");
+    const { data } = await axios.get("https://ecommercewebsitefinal.onrender.com/api/products");
     // console.log("dawdwadwa" + DataProducts.data[0].name);
     dispatch({ type: GET_PRODUCTS_SUCCESS, payload: data.DataProducts });
   } catch (error) {
