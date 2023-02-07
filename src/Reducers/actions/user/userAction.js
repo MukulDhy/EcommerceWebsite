@@ -22,7 +22,7 @@ export const login = (email, password) => async (dispatch) => {
     dispatch({ type: USER_LOGIN_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.post(
-      `http://localhost:5000/api/users/login`,
+      `https://ecommercewebsitefinal.onrender.com/api/users/login`,
       { email, password },
       config
     );
@@ -63,7 +63,7 @@ export const register = (name, email, password) => async (dispatch) => {
     dispatch({ type: REGISTER_USER_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.post(
-      "http://localhost:5000/api/users/register",
+      "https://ecommercewebsitefinal.onrender.com/api/users/register",
       { name, email, password },
       config
     );
