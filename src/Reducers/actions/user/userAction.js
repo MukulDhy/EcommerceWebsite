@@ -94,7 +94,7 @@ export const userDetailAction = (id) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-    const { data } = await axios.get("api/users/profile", config);
+    const { data } = await axios.get("https://ecommercewebsitefinal.onrender.com/api/users/profile", config);
     dispatch({ type: USER_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -120,7 +120,7 @@ export const userUpdateDetailAction = (name,email,password) => async (dispatch, 
       },
     };
     // console.log(userInfo.token);
-    const { data } = await axios.put("api/users/profile",{name,email,password}, config);
+    const { data } = await axios.put("https://ecommercewebsitefinal.onrender.com/api/users/profile",{name,email,password}, config);
     // console.log("awjdawbdjawbdjbawdbwaudbawuabdug21t736127351725371257")
     dispatch({ type: USER_UPDATE_DETAILS_SUCCESS, payload: data });
     dispatch({type : USER_LOGIN_SUCCESS,payload : data});
