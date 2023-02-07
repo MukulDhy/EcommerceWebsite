@@ -18,7 +18,7 @@ export const createOrderAction = (orders) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post("/api/orders", orders, config);
+    const { data } = await axios.post("https://ecommercewebsitefinal.onrender.com/api/orders", orders, config);
     dispatch({ type: ORDER_CREATE_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
