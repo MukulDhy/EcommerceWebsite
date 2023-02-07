@@ -4,7 +4,7 @@ require("colors");
 
 const connectionDb = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://AllMallIN:AllMallIN123@cluster0.ntfjfaq.mongodb.net/?retryWrites=true&w=majority", {
+    const conn = await mongoose.connect("mongodb+srv://AllMallIn:AllMallIn@cluster0.aspm5xb.mongodb.net/?retryWrites=true&w=majority", {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
