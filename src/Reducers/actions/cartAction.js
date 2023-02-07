@@ -3,7 +3,7 @@ import { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_PAYMENT_METHOD, CART_SAVE_SH
 
 export const addToCart = (id, qyt) => async (dispatch, getState) => {
   try {
-    const { data } = await axios.get(`/api/product/${id}`);
+    const { data } = await axios.get(`https://ecommercewebsitefinal.onrender.com/api/product/${id}`);
     const orgData = data.Singleproduct;
     // console.log("data = " + orgData.name);
     dispatch({
